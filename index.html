@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="sketch.js"></script>
+
+    <link rel="shortcut icon" type="image/x-icon" href="logo1.ico">
+
+    <style>
+    .row {
+      background-color: #e3e3e3;
+      border-radius: 15px;
+    }
+    .col-md-10 {
+      background-color: #f5f3f3;  
+    }
+    </style>
+
+
+    <title>BINARY SEARCH TREE</title>
+
+  </head>
+  <body>
+  <!--body style="background-color:rgb(23,32,45);"-->
+    <!--Nav bar-->
+    <nav class="navbar navbar-dark bg-dark">
+    <header class="navbar navbar-dark flex-column flex-md-row bd-navbar">
+    <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+    </ul>
+    <div class="navbar-nav-scroll">
+      <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+      <a class="nav-link" href="#"><img src="logo1.png"><font color="white">
+      &nbsp;&nbsp;&nbsp;LUCID SIMULATIONS&nbsp;&nbsp;&nbsp;</font></a>
+      </ul>
+    </div>
+    </div>
+    </header>
+    </nav>
+    <!--h1 align='CENTER'>BINARY SEARCH TREE</h1-->
+    <div id="sketch-holder" ,class="container">
+    </div>
+
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-1"><p>
+        
+        </p>
+        </div>
+        <div class="col-10 "><br>
+        <h3 align="center">TREE BASED DATA STRUCTURES</h3>
+        <p>
+          The following is definition of Binary Search Tree(BST) : Its is a node-based binary tree data structure which has the following properties:<br>
+<ul>
+<li>The left subtree of a node contains only nodes with keys lesser than the node’s key.</li>
+<li>The right subtree of a node contains only nodes with keys greater than the node’s key.</li>
+<li>The left and right subtree each must also be a binary search tree.</li>
+<li>There must be no duplicate nodes.</li>
+</ul>
+        </p>
+
+        <p align="center">
+          <img src="img1.jpg">
+        </p>
+
+        <p>
+          <h5>Searching a key</h5>
+To search a given key in Bianry Search Tree, we first compare it with root, if the key is present at root, we return root. If key is greater than root’s key, we recur for right subtree of root node. Otherwise we recur for left subtree.
+        </p>
+        
+        <p>
+          <h5>Insertion of a key</h5>
+A new key is always inserted at leaf. We start searching a key from root till we hit a leaf node. Once a leaf node is found, the new node is added as a child of the leaf node.<br>
+Illustration to insert in the tree:<br>
+1. Start from root.<br>
+2. Compare the inserting element with root, if less than root, then recurse for left, else recurse for right.<br>
+3. After reaching end,just insert that node at left(if less than current) else right.<br>
+        </p>
+
+        <p><h5>Deletion of a key</h5>
+          Following steps are followed in order to delete a key.<br>
+          1. Traverse the tree to find the key. If key is found, do the following:-<br>
+          &nbsp;- If the key has neither left nor right child, simply delete it.<br>
+          &nbsp;- If the key has right child, find its inorder successor i.e. the smallest node in its right subtree, and replace the key with this successor after deleting it.<br>
+          &nbsp;- If the key has left child, find its inorder predecessor i.e. the largest node in its left subtree, and replace the key with this predecessor after deleting it.<br>
+          2. Key is absent. So exit.<br>
+        </p>
+        
+        <p>
+          <h6>Simulation assumptions and constraints:-</h6>
+          <ul>
+            <li>Tree can be created upto level of 6.</li>
+            <li>Node can have integer or float values upto length of 6.</li>
+            <li>Next and previous steps are not implemented in delete operation.</li>
+          </ul>
+        </p>
+        <p align="right">Theory source : www.geekforgeeks.org</p>
+        </div>
+        <div class="col-1">
+        
+        </div>
+      </div>
+      <hr>
+    </div>
+
+  </body>
+</html> 
